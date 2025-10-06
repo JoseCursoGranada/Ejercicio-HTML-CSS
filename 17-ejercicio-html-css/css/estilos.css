@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Merriweather+Sans&display=swap');
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.6;
+    padding-top: 120px;
+      /* Fondo Mordor + degradado */
+  background: 
+    url("C:/Users/Certificado/Desktop/Certificado de profesionalidad de paginas web/PROYECTOS/PROYECTO_CSS/17-ejercicio-html-css/img/fondo.jpg")
+    no-repeat center center fixed;
+    text-align: center;
+    background-size: cover;
+}
+
+
+/* Header y navegación */
+
+header {
+  background: rgba(18, 18, 18, 0.9);
+  color: #f44336;
+  padding: 20px;
+  border-bottom: 3px solid #f44336;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.7);
+  position: fixed;       /* Lo fija en pantalla */
+  top: 0;                /* Pegado arriba */
+  left: 0;               /* Pegado a la izquierda */
+  width: 100%;           /* Ocupa todo el ancho */
+  z-index: 1000;         /* Se asegura de estar encima */
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff5722, 0 0 20px #f44336;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #e0e0e0;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ff5722;
+  text-shadow: 0 0 10px #ff5722, 0 0 15px #f44336;
+}
+
+/* Secciones */
+section, aside {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(26, 26, 26, 0.85); /* Transparente para ver fondo */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
+  margin-bottom: 30px;
+}
+
+section h2, aside h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+  text-shadow: 0 0 8px #f44336;
+}
+
+/* Imagen sobre mí y habilidades */
+section img {
+  border-radius: 10px;
+  border: 3px solid #f44336;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.7);
+  margin: 15px 0;
+  width: 20%;
+}
+.habilidades{
+     background: rgba(18, 18, 18, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.3);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+ul{
+  list-style: none;
+}
+.sauron{
+ border-radius: 40%;
+}
+aside{
+  grid-template-columns: auto;
+}
+/* Grid de proyectos */
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.proyecto {
+  background: rgba(18, 18, 18, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(244, 67, 54, 0.3);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid #ff5722;
+  margin-bottom: 10px;
+}
+
+.proyecto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(244, 67, 54, 0.7);
+}
+
+/* Footer */
+footer {
+  background: rgba(13, 13, 13, 0.9);
+  color: #bbb;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #f44336;
+  box-shadow: 0 -2px 15px rgba(244, 67, 54, 0.5);
+}
+
+footer a {
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-shadow: 0 0 8px #f44336;
+}
+
+/* Responsividad *//* Responsividad */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+    padding: 2%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+    height: 35px;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .sobre-mi-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-contenedor img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyectos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
